@@ -1,0 +1,321 @@
+<html>
+<head>
+    <title>Homoeo Clinic - Dr. Keya Bhattacharyya</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+         {
+            font-family: Arial, sans-serif;
+            background-color: beige;
+        }
+
+   
+        header {
+            background-image: url("C:/Users/Udita/OneDrive/Desktop/MSC SEM 2/WEB TECHNOLOGY/WEBSITE/bg.jpg");
+            background-size: cover;
+            background-position:center;
+            height: 500px;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            animation: fade-in 2s ease-in-out;
+        }
+
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+      
+        nav {
+            background-color: #00c853;
+            padding: 10px 0;
+            text-align: center;
+            animation: slide-down 0.5s ease-in-out;
+        }
+
+        @keyframes slide-down {
+            from { transform: translateY(-20px); }
+            to { transform: translateY(0); }
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 10px;
+            position: relative;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        nav a:hover {
+            background-color: #00a033;
+        }
+
+        nav li ul {
+            display: none;
+            position: absolute;
+            background-color: #00c853;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1;
+            animation: fade-in 0.3s ease-in-out;
+        }
+
+        nav li:hover > ul {
+            display: block;
+        }
+
+        nav li ul li {
+            margin: 5px 0;
+        }
+
+        /* Main content styles */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            animation: fade-in 0.5s ease-in-out;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            animation: text-up 1s ease-in-out;
+        }
+
+        @keyframes text-up {
+            from { transform: translateY(20px); }
+            to { transform: translateY(0); }
+        }
+
+        h2 { font-size: 2em; }
+        h3 { font-size: 1.5em; }
+
+        p, ul li {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .social-media {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-media a {
+            margin-right: 10px;
+            font-size: 1.2em;
+            color: #333;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .social-media a:hover {
+            color: #00c853;
+        }
+
+        .appointment-btn {
+            display: inline-block;
+            background-color: #00c853;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.2s ease-in-out;
+            animation: bounce 0.5s ease-in-out;
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0); }
+        }
+
+        .appointment-btn:hover {
+            background-color: #00a033;
+        }
+
+        /* Review styles */
+        .review-section {
+            background-color: #f5f5f5;
+            padding: 40px 0;
+        }
+
+        .review-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .review-card {
+            background-color: #fffde7;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            animation: fade-in 0.5s ease-in-out;
+        }
+
+        .review-card h4 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .review-card p {
+            line-height: 1.6;
+        }
+
+        .doctor-experience {
+            margin-top: 40px;
+            padding: 30px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            animation: slide-up 0.5s ease-in-out;
+        }
+
+        @keyframes slide-up {
+            from { transform: translateY(20px); }
+            to { transform: translateY(0); }
+        }
+
+        .doctor-experience h3 {
+            color: #00c853;
+            margin-bottom: 20px;
+        }
+
+        .doctor-experience ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .doctor-experience li {
+            line-height: 1.6;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><center>Homoeo Clinic</center></h1>
+        <h3><center>Natural healing for a healthier you</center></h3>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a>Home</a></li>
+            <li>
+               <a> Services</a>
+                <ul>
+                    <li>Allergies</li>
+                    <li>Chronic Pain</li>
+                    <li>Digestive Issues</li>
+                    <li>Respiratory Problems</li>
+                    <li>General Wellness</li>
+					<li>Hormonal Disorders</li>
+					<li>Fertility Problems</li>
+					<li>Pshychiatric Disorders</li>
+					<li>Bone and Joint Disorders</li>
+					<li>Skin and hair Disorders</li>
+					<li>Gastrointial Disorders</li>
+                </ul>
+            </li>
+			 <li><a href="Contact.html">Contact Details</a></li>
+            <li><a href="REVIEW.html">Reviews</a></li>
+			<li><a href="DOC_DETAILS.html">About Dr. Bhattacharyya</a></li>
+            <li><a href="Booking_appointment.html">Book Appointment</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section class="about-us">
+            <h2>About Us</h2>
+            <img src="doc.jpeg" alt="Dr. Keya Bhattacharyya" height="100" width="100" style="float: right; margin-left: 20px; border: 2px solid #333;">
+            <p>Welcome to Homoeo Clinic, led by Dr. Keya Bhattacharyya (DHMS), a dedicated homeopathic practitioner.</p>
+            <p>Homeopathy is a holistic system of medicine that uses natural remedies to stimulate the body's self-healing abilities. It treats the root cause of illness, promoting overall well-being.</p>
+            <p>Dr. Bhattacharyya has extensive experience in homeopathy and is passionate about helping patients achieve optimal health.</p>
+        </section>
+
+        <section class="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Treatment for various conditions, including allergies, chronic pain, digestive issues, respiratory problems, and more.</li>
+                <li>Personalized consultations to understand your unique needs and goals.</li>
+                <li>Safe and gentle remedies with minimal side effects.</li>
+            </ul>
+        </section>
+
+        <section class="why-choose-us">
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li>Experienced and qualified homeopathic doctor (DHMS)</li>
+                <li>Individualized treatment plans tailored to your specific health concerns.</li>
+                <li>Focus on holistic wellness, promoting overall health and well-being.</li>
+                <li>Safe and natural approach to healing.</li>
+            </ul>
+        </section>
+
+        <section class="appointment-section">
+            <h2>Book Your Appointment Today</h2>
+            <p>Call us or schedule an appointment online to experience the benefits of homeopathy.</p>
+            <a href="Booking_appointment.html" class="appointment-btn">Book Appointment</a>
+        </section>
+
+        <section class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Address: Sakuntala Apartment, 224/A, Anandamath, Ichapur</p>
+            <p>Phone: 9903345345</p>
+            <p>Email: keyabhattacharyya90@gmail.com</p>
+            <h3>Clinic Hours</h3>
+            <p>Morning: 11:30 am to 1:00 pm</p>
+            <p>Evening: 6:30 pm to 9:30 pm</p>
+            <h3>Closed</h3>
+            <p>THURSDAY & SUNDAY</p>
+        </section>
+    </main>
+
+    <section class="doctor-experience">
+        <h3>Dr. Keya Bhattacharyya's Experience</h3>
+        <ul>
+            <li>Practicing homeopathy since 2004</li>
+            <li>Specializes in treating a wide range of conditions, including allergies, chronic pain, digestive issues, and respiratory problems</li>
+            <li>Attended several homeopathic conferences and workshops to stay up-to-date with the latest advancements in the field</li>
+            <li>Helped numerous patients achieve optimal health through personalized treatment plans</li>
+            <li>Passionate about promoting the benefits of homeopathic medicine</li>
+        </ul>
+    </section>
+</body>
+</html>

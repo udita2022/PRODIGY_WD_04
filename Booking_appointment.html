@@ -1,0 +1,124 @@
+<html>
+<head>
+    <title>Homoeo Clinic - Book Appointment</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+    
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 40px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 120px;
+        }
+
+        .submit-btn {
+            background-color:blue;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .submit-btn:hover {
+            background-color:green;
+        }
+
+        .note {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Book Your Appointment</h2>
+        <p>Schedule your appointment with Dr. Keya Bhattacharyya (DHMS)</p>
+        <form action="form-submit.php" method="post">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Preferred Time:</label>
+                <select id="time" name="time">
+                    <option value="">Select Time</option>
+                    <option value="morning">Morning (11:00 AM - 1:00 PM)</option>
+                    <option value="evening">Evening (6:30 PM - 9:30 PM)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="reason">Reason for Appointment (Optional):</label>
+                <textarea id="reason" name="reason"></textarea>
+            </div>
+            <div class="form-group">
+                <a href="C:\Users\Udita\OneDrive\Desktop\MSC SEM 2\WEB TECHNOLOGY\WEBSITE\Bconfirmation.html" class="submit-btn">Book Appointment</a>
+            </div>
+        </form>
+        <p class="note">*We will confirm your appointment via phone or email shortly.</p>
+    </div>
+</body>
+</html>
